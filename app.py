@@ -37,6 +37,10 @@ query = st.chat_input("Ask Richard Hamming anything...")
 
 if query:
     st.session_state.messages.append({"role":"user","content":query})
+
+    with st.chat_message("user"):
+        st.write(query)
+    
     results = db.similarity_search(query,k=3)
 
     context = "\n\n".join([doc.page_content for doc in results])
