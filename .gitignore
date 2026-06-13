@@ -6,3 +6,5 @@ chroma_db/
 .vscode/
 temp.py
 test_gem.py
+response.mp3
+memory.json
